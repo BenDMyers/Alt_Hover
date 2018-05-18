@@ -4,25 +4,6 @@
 
 ***
 
-##### Files not included in this repository that are required for the extension:
+Although not included in this repository, this extension makes use of [atomiks]()'s excellent library, [`tippy`](https://atomiks.github.io/tippyjs/).
 
-* [`bootstrap.min.css`](https://getbootstrap.com/docs/4.0/getting-started/download/)
-
-* [`bootstrap.min.js`](https://getbootstrap.com/docs/4.0/getting-started/download/)
-
-* [`jquery-3.3.1.min.js`](https://jquery.com/download/)
-
-* [`popper.min.js`](https://github.com/FezVrasta/popper.js#installation)
-
-* [`tooltip.min.js`](https://github.com/FezVrasta/popper.js#installation)
-
-
-***
-
-##### TODO:
-
-* Fix tooltip width/truncation
-
-* Fix page rendering bugs
-
-* Reallow replies/retweeting
+* [`tippy.min.js`](https://unpkg.com/tippy.js@2.5.2/dist/tippy.all.min.js)

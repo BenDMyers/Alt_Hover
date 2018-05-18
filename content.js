@@ -1,22 +1,20 @@
-overflow = document.createElement('style');
-overflow.innerHTML = '.tooltip {white-space: wrap;} .tooltip-inner {max-width: none; word-wrap: break-word !important;}'
-document.body.appendChild(overflow)
-
 setInterval(loadTooltips, 1000)
-// loadTooltips();
 
 function loadTooltips() {
-    $('.AdaptiveMedia-container img').each(function(index) {
-        img = $(this);
-        description = img.attr('alt');
-        // if(img.data && img.data('bs.tooltip')) {
-        //     return;
-        // }
-        // else {
+    images = document.querySelectorAll('.AdaptiveMedia-container img');
+    for(i = 0, len = images.length; i < len; i++) {
+        image = images[i];
+        if(image.hasAttribute('data-tippy')) {
+            continue;
+        }
+        else {
+            description = image.getAttribute('alt');
             if(!description || description === "") {
                 description = "<i>No image description provided</i>";
             }
-            img.tooltip({title: description, placement: "auto", html: true});
-        // }
-    })
+            image.setAttribute('title', description);
+        }
+    }
+
+    tippy('.AdaptiveMedia-container img', {arrow: true, arrowType: 'round'});
 }
